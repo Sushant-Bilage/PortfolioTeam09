@@ -1,5 +1,5 @@
 # city design
-## 📘 Portfolio
+##  Portfolio
 
 ### **Course:** Design & Analysis of Algorithms (DAA)  
 ### **Course Code:** 24ECSC205  
@@ -9,7 +9,7 @@
 
 ---
 
-## 👥 Team Information
+##  Team Information
 
 | **Name**      | **USN**         |
 |---------------|------------------|
