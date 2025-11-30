@@ -19,4 +19,13 @@
 | Vaishnavi     | 01FE24BCS295     |
 
 ---
+## 📁 Menu
+
+| Section | Link |
+|--------|------|
+| 📘 Portfolio | [Go](#-portfolio) |
+| 👥 Team Info | [Go](#-team-information) |
+| 🏙️ Topic | [Go](#topic-city-design) |
+| 📐 Algorithm | [Go](#algorithm) |
+| 🧪 Results | [Go](#results) |
 
