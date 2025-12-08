@@ -1,1 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart City – Stripe Style</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.3s;
+}
+.menu a:hover { opacity: 0.7; }
+
+/* LEFT GRADIENT (65%) */
+.left-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100vh;
+    background: linear-gradient(140deg, #ff8a00, #ff4e8e, #a462ff, #4aa8ff);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+    z-index: -1;
+    opacity: 0.92;
+}
+
+/* GRADIENT ANIMATION */
+@keyframes gradientMove {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* HERO TEXT */
+.hero {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+    color: #fff;
+    max-width: 550px;
+}
+
+.hero-title {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+/* EXPLORE BUTTON */
+.right-side {
+    position: absolute;
+    right: 5%;
+    top: 45%;
+}
+
+.explore-btn {
+    padding: 18px 45px;
+    font-size: 22px;
+    font-weight: 600;
+    background: #0a2540;
+    color: #fff;
+    border-radius: 14px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+.explore-btn:hover {
+    background: #001a2d;
+    transform: translateY(-3px);
+}
+
+/* CONTENT SECTIONS */
+.section {
+    margin-top: 110vh;
+    padding: 70px 100px;
+}
+
+.section h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #0a2540;
+}
+
+.course-box {
+    margin-top: 20px;
+    background: #f4f7ff;
+    padding: 25px 35px;
+    border-radius: 18px;
+    font-size: 20px;
+    line-height: 1.7;
+    border-left: 6px solid #4a8bff;
+}
+
+/* TEAM TABLE */
+.team-table {
+    margin-top: 40px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+.team-table th, .team-table td {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 15px;
+}
+
+.team-table th {
+    background: #eef3ff;
+    font-weight: 700;
+    color: #0a2540;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+    <div class="logo">SmartCity</div>
+
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="project.html">Project</a>
+        <a href="collabz.html">Collaboration</a>
+        <a href="sunil.html">Sunil</a>
+        <a href="vijayalaxmi.html">Vijayalaxmi</a>
+        <a href="vaishnavi.html">Vaishnavi</a>
+        <a href="sushant.html">Sushant</a>
+    </div>
+</div>
+
+<!-- LEFT GRADIENT -->
+<div class="left-gradient"></div>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-title">
+        Smart City  
+        Innovation  
+        for Tomorrow
+    </div>
+</div>
+
+<!-- EXPLORE BUTTON -->
+<div class="right-side">
+    <button class="explore-btn" onclick="location.href='project.html'">
+        Explore Our Project →
+    </button>
+</div>
+
+<!-- COURSE INFO SECTION -->
+<div class="section">
+    <h2>📘 Course Information</h2>
+
+    <div class="course-box">
+        <b>Course:</b> Artificial Intelligence & Machine Learning (AIML) <br>
+        <b>Department:</b> Computer Science & Engineering <br>
+        <b>College:</b> Government College of Engineering, Karad <br>
+        <b>Project:</b> Smart City – Future Tech Innovation
+    </div>
+
+    <h2 style="margin-top:60px;">👥 Our Team Members</h2>
+
+    <table class="team-table">
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Page Link</th>
+        </tr>
+
+        <tr>
+            <td>Sunil</td>
+            <td>Team Leader / Developer</td>
+            <td><a href="sunil.html">Open</a></td>
+        </tr>
+
+        <tr>
+            <td>Vijayalaxmi</td>
+            <td>Research / Analyst</td>
+            <td><a href="vijayalaxmi.html">Open</a></td>
+        </tr>
+
+        <tr>
+            <td>Vaishnavi</td>
+            <td>Content / UI Designer</td>
+            <td><a href="vaishnavi.html">Open</a></td>
+        </tr>
+
+        <tr>
+            <td>Sushant</td>
+            <td>Technical Support / Developer</td>
+            <td><a href="sushant.html">Open</a></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
 
