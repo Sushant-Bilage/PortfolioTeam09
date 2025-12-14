@@ -1,201 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart City Ideas – DAA Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Ideas – DAA Smart City</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #0f0f0f;
-            color: #e0e0e0;
-        }
+<style>
+body,h1,h2,p,a,div{font-family:'Poppins',sans-serif!important;}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-        /* Sidebar */
-        .sidebar {
-            width: 220px;
-            height: 100vh;
-            position: fixed;
-            background: #121212;
-            padding: 25px 15px;
-            box-sizing: border-box;
-        }
+body{
+    background:#0e0e0e;
+    color:#fff;
+    padding:40px 20px;
+}
 
-        .sidebar h2 {
-            color: #00c8ff;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-        }
+h1{
+    text-align:center;
+    color:#00ffbf;
+    margin-bottom:40px;
+}
 
-        .sidebar a {
-            display: block;
-            color: #cccccc;
-            text-decoration: none;
-            margin: 10px 0;
-            font-size: 0.95rem;
-        }
+.container{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
 
-        .sidebar a:hover {
-            color: #00c8ff;
-        }
+.idea{
+    background:rgba(20,20,35,0.75);
+    padding:25px;
+    border-radius:16px;
+    border:1px solid rgba(0,255,200,0.2);
+    text-decoration:none;
+    color:#fff;
+    transition:0.3s;
+}
 
-        /* Main content */
-        .main {
-            margin-left: 220px;
-        }
+.idea:hover{
+    transform:scale(1.04);
+    box-shadow:0 0 18px rgba(0,255,200,0.2);
+}
 
-        /* Sections */
-        .section-grey-light {
-            background: #1e1e1e;
-            padding: 60px 40px;
-        }
+.idea h2{
+    color:#00c8ff;
+    font-size:1.3rem;
+}
 
-        .section-grey-dark {
-            background: #2a2a2a;
-            padding: 60px 40px;
-        }
-
-        .section-content {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        /* Header */
-        .heading-block {
-            background: #121212;
-            padding: 50px 40px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #00c8ff;
-            font-size: 2.6rem;
-            margin: 0;
-        }
-
-        h2 {
-            color: #ffd166;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            color: #00ffbf;
-            margin-bottom: 10px;
-        }
-
-        p {
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        /* Clickable Idea Cards */
-        .idea-card {
-            border-left: 4px solid #00c8ff;
-            padding: 20px;
-            background: rgba(255,255,255,0.03);
-            margin-bottom: 20px;
-            cursor: pointer;
-            transition: background 0.25s, transform 0.2s;
-        }
-
-        .idea-card:hover {
-            background: rgba(255,255,255,0.07);
-            transform: translateY(-3px);
-        }
-    </style>
+.idea p{
+    margin-top:10px;
+    color:#ddd;
+    font-size:0.95rem;
+    line-height:1.6;
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= SIDEBAR ================= -->
-<div class="sidebar">
-    <h2>DAA Project</h2>
-    <a href="home.html">Home</a>
-    <a href="ideas.html">Smart City Ideas</a>
-    <a href="idea1.html">Idea 1 – Sports</a>
-    <a href="idea2.html">Idea 2 – Mobility</a>
-    <a href="idea3.html">Idea 3 – A-LMS</a>
-    <a href="idea4.html">Idea 4 – Waste</a>
-    <a href="idea5.html">Idea 5 – Water</a>
-</div>
+<h1>Smart City Project Ideas</h1>
 
-<!-- ================= MAIN ================= -->
-<div class="main">
+<div class="container">
 
-    <!-- PAGE HEADING -->
-    <div class="heading-block">
-        <h1>Smart City Project Ideas</h1>
-        <p>Real-world applications built using Design & Analysis of Algorithms</p>
-    </div>
+<a href="idea1.html" class="idea">
+    <h2>Idea 1: Structured Sports Data Management System</h2>
+    <p>
+        Efficient management of sports data using graphs, heaps, hashing,
+        and shortest-path algorithms for scheduling and ranking.
+    </p>
+</a>
 
-    <!-- INTRO -->
-    <div class="section-grey-light">
-        <div class="section-content">
-            <h2>Overview</h2>
-            <p>
-                Each Smart City idea below demonstrates how core DAA concepts such as
-                graph algorithms, trees, sorting techniques, and optimization methods
-                are applied to solve real-world urban problems.
-            </p>
-        </div>
-    </div>
+<a href="idea2.html" class="idea">
+    <h2>Idea 2: Energy-Optimized Mobility Classification System</h2>
+    <p>
+        Optimizes city transportation using greedy strategies,
+        dynamic programming, priority queues, and route-finding algorithms.
+    </p>
+</a>
 
-    <!-- IDEAS LIST -->
-    <div class="section-grey-dark">
-        <div class="section-content">
+<a href="idea3.html" class="idea">
+    <h2>Idea 3: Accessible Animated Learning Management System</h2>
+    <p>
+        Inclusive education platform using trees, AVL, graphs,
+        queues, hashing, and sorting algorithms.
+    </p>
+</a>
 
-            <div class="idea-card" onclick="location.href='idea1.html'">
-                <h3>Idea 1: Structured Sports Data Management System</h3>
-                <p>
-                    Manages player records, rankings, tournament progression,
-                    and performance analysis using trees, sorting algorithms,
-                    and graph-based techniques.
-                </p>
-            </div>
+<a href="idea4.html" class="idea">
+    <h2>Idea 4: Intelligent Waste Classification & Recycling System</h2>
+    <p>
+        Waste management optimization using graphs, BFS, Kruskal,
+        priority queues, and sorting techniques.
+    </p>
+</a>
 
-            <div class="idea-card" onclick="location.href='idea2.html'">
-                <h3>Idea 2: Energy-Optimized Mobility Classification System</h3>
-                <p>
-                    Optimizes city transportation by computing minimum energy routes,
-                    prioritizing vehicles, and calculating fares using graph algorithms
-                    and priority queues.
-                </p>
-            </div>
-
-            <div class="idea-card" onclick="location.href='idea3.html'">
-                <h3>Idea 3: Accessible Animated Learning Management System (A-LMS)</h3>
-                <p>
-                    Provides inclusive education through structured lesson flows,
-                    adaptive learning paths, and student performance analysis
-                    using BFS, trees, and sorting.
-                </p>
-            </div>
-
-            <div class="idea-card" onclick="location.href='idea4.html'">
-                <h3>Idea 4: Intelligent Waste Classification & Recycling System</h3>
-                <p>
-                    Optimizes waste collection routes, recycling networks,
-                    and environmental impact using shortest path algorithms
-                    and minimum spanning trees.
-                </p>
-            </div>
-
-            <div class="idea-card" onclick="location.href='idea5.html'">
-                <h3>Idea 5: Intelligent Water Flow & Leak Management System</h3>
-                <p>
-                    Detects water leaks, optimizes pipeline networks,
-                    and balances pressure using classical graph algorithms
-                    and balanced tree structures.
-                </p>
-            </div>
-
-        </div>
-    </div>
+<a href="idea5.html" class="idea">
+    <h2>Idea 5: Intelligent Water Flow & Leak Management System</h2>
+    <p>
+        Smart water distribution using graph algorithms,
+        Prim, Bellman-Ford, Floyd-Warshall, and priority queues.
+    </p>
+</a>
 
 </div>
 
