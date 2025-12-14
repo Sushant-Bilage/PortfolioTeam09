@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy-Optimized Mobility Classification System</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body, h1, h2, h3, h4, h5, h6,
+        p, a, span, div, table, th, td, button {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #0e0e0e;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: rgba(20, 20, 35, 0.75);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            max-width: 900px;
+            margin: auto;
+            border: 1px solid rgba(0,255,200,0.2);
+            box-shadow: 0 0 18px rgba(0,255,200,0.15);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #00ffbf;
+            font-weight: 600;
+        }
+
+        .section-title {
+            margin-top: 28px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #00c8ff;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #ddd;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #00ffbf;
+            color: #000;
+            font-weight: 500;
+            border-radius: 10px;
+            margin-top: 12px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover { transform: scale(1.05); }
+
+        .back {
+            display: inline-block;
+            padding: 12px 20px;
+            margin-top: 35px;
+            background: #00aaff;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .back:hover { background: #0088cc; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            text-align: center;
+        }
+
+        th {
+            background: rgba(0,255,200,0.22);
+            color: #00ffbf;
+            font-weight: 600;
+        }
+
+        td {
+            color: #e6e6e6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>Energy-Optimized Mobility Classification System</h1>
+
+    <p>
+        Modern smart cities rely heavily on electric transportation, including E-buses, E-autos,
+        metro feeders, shared EV bikes, and bicycles. The challenge is to identify transport modes
+        that minimize energy consumption while keeping travel cost efficient.
+    </p>
+
+    <p>
+        This system applies Design and Analysis of Algorithms (DAA) concepts to classify city transport,
+        calculate minimum fare based on distance, display public transport timings, and suggest
+        energy-efficient mobility options.
+    </p>
+
+    <!-- A* -->
+    <h2 class="section-title">A* Algorithm – Energy-Optimized Route Finder</h2>
+    <p>Finds the most energy-efficient route using heuristic-based shortest path selection.</p>
+    <a class="button" target="_blank"
+       href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/astar2.cpp">
+       View A* Implementation
+    </a>
+
+    <!-- DP -->
+    <h2 class="section-title">Dynamic Programming – Minimum Fare Calculation</h2>
+    <p>Computes the lowest possible fare by evaluating optimal substructures.</p>
+    <a class="button" target="_blank"
+       href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/dp2.cpp">
+       View DP Implementation
+    </a>
+
+    <!-- GREEDY -->
+    <h2 class="section-title">Greedy Algorithm – Vehicle Selection</h2>
+    <p>Selects the vehicle with minimum energy consumption per kilometer.</p>
+    <a class="button" target="_blank"
+       href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/greedy2.cpp">
+       View Greedy Implementation
+    </a>
+
+    <!-- MAP -->
+    <h2 class="section-title">Map – Transport Classification</h2>
+    <p>Stores transport type and energy ratings for fast access.</p>
+    <a class="button" target="_blank"
+       href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/map2.cpp">
+       View Map Implementation
+    </a>
+
+    <!-- QUEUE -->
+    <h2 class="section-title">Queue – Transport Scheduling</h2>
+    <p>Maintains FIFO order for arrival and scheduling operations.</p>
+    <a class="button" target="_blank"
+       href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/queue2.cpp">
+       View Queue Implementation
+    </a>
+
+    <!-- PRIORITY QUEUE -->
+    <h2 class="section-title">Priority Queue – Battery Level Ranking</h2>
+    <p>Ranks electric vehicles based on battery availability.</p>
+    <a class="button" target="_blank"
+       href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/priorityqueue2.cpp">
+       View Priority Queue Implementation
+    </a>
+
+    <!-- TABLE -->
+    <h2 class="section-title" style="margin-top:40px;">Data Structures & Algorithms Comparison</h2>
+
+    <table>
+        <tr>
+            <th>DS / Algorithm</th>
+            <th>Design Technique</th>
+            <th>Time Efficiency</th>
+            <th>Space Efficiency</th>
+            <th>Stability</th>
+            <th>Adaptive</th>
+            <th>In-Place</th>
+        </tr>
+
+        <tr><td>A*</td><td>Heuristic</td><td>O(E log V)</td><td>O(V)</td><td>N/A</td><td>No</td><td>No</td></tr>
+        <tr><td>Dynamic Programming</td><td>Optimal Substructure</td><td>O(n×k)</td><td>O(n)</td><td>Stable</td><td>No</td><td>No</td></tr>
+        <tr><td>Greedy</td><td>Greedy Choice</td><td>O(n)</td><td>O(1)</td><td>No</td><td>No</td><td>Yes</td></tr>
+        <tr><td>Map</td><td>Hashing</td><td>O(1)</td><td>O(n)</td><td>Stable</td><td>No</td><td>No</td></tr>
+        <tr><td>Queue</td><td>FIFO</td><td>O(1)</td><td>O(n)</td><td>Stable</td><td>No</td><td>No</td></tr>
+        <tr><td>Priority Queue</td><td>Heap</td><td>O(log n)</td><td>O(n)</td><td>Unstable</td><td>No</td><td>No</td></tr>
+    </table>
+
+    <a href="ideas.html" class="back">← Back to All Ideas</a>
+
+</div>
+
+</body>
+</html>
