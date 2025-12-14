@@ -1,238 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart City – Stripe Style</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Project – DAA Overview</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-/* GLOBAL */
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #ffffff;
-    overflow-x: hidden;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
+        }
 
-/* NAVBAR */
-.navbar {
-    width: 100%;
-    padding: 20px 50px;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    position: absolute;
-    top: 0;
-    z-index: 10;
-}
+        /* Layout */
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            position: fixed;
+            background: #121212;
+            padding: 25px 15px;
+            box-sizing: border-box;
+        }
 
-.logo {
-    font-size: 28px;
-    font-weight: 800;
-    color: #fff;
-}
+        .sidebar h2 {
+            color: #00c8ff;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
 
-.menu {
-    display: flex;
-    gap: 30px;
-}
+        .sidebar a {
+            display: block;
+            color: #cccccc;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 0.95rem;
+        }
 
-.menu a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    font-size: 17px;
-    transition: 0.3s;
-}
-.menu a:hover { opacity: 0.7; }
+        .sidebar a:hover {
+            color: #00c8ff;
+        }
 
-/* LEFT GRADIENT (65%) */
-.left-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 65%;
-    height: 100vh;
-    background: linear-gradient(140deg, #ff8a00, #ff4e8e, #a462ff, #4aa8ff);
-    background-size: 300% 300%;
-    animation: gradientMove 10s ease infinite;
-    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
-    z-index: -1;
-    opacity: 0.92;
-}
+        .main {
+            margin-left: 220px;
+        }
 
-/* GRADIENT ANIMATION */
-@keyframes gradientMove {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+        /* Section styles */
+        .section-grey-light {
+            background: #1e1e1e;
+            padding: 60px 40px;
+            display: flex;
+            gap: 30px;
+        }
 
-/* HERO TEXT */
-.hero {
-    position: absolute;
-    top: 25%;
-    left: 7%;
-    color: #fff;
-    max-width: 550px;
-}
+        .section-grey-dark {
+            background: #2a2a2a;
+            padding: 60px 40px;
+            display: flex;
+            gap: 30px;
+        }
 
-.hero-title {
-    font-size: 70px;
-    font-weight: 800;
-    line-height: 1.05;
-}
+        .section-content {
+            max-width: 1000px;
+            margin: auto;
+        }
 
-/* EXPLORE BUTTON */
-.right-side {
-    position: absolute;
-    right: 5%;
-    top: 45%;
-}
+        h1 {
+            text-align: center;
+            color: #00c8ff;
+            font-size: 2.6rem;
+            margin: 0;
+        }
 
-.explore-btn {
-    padding: 18px 45px;
-    font-size: 22px;
-    font-weight: 600;
-    background: #0a2540;
-    color: #fff;
-    border-radius: 14px;
-    cursor: pointer;
-    border: none;
-    transition: 0.3s;
-}
-.explore-btn:hover {
-    background: #001a2d;
-    transform: translateY(-3px);
-}
+        h2 {
+            color: #ffd166;
+            margin-bottom: 15px;
+        }
 
-/* CONTENT SECTIONS */
-.section {
-    margin-top: 110vh;
-    padding: 70px 100px;
-}
+        h3 {
+            color: #00ffbf;
+            margin-bottom: 10px;
+        }
 
-.section h2 {
-    font-size: 45px;
-    font-weight: 800;
-    color: #0a2540;
-}
+        p {
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
 
-.course-box {
-    margin-top: 20px;
-    background: #f4f7ff;
-    padding: 25px 35px;
-    border-radius: 18px;
-    font-size: 20px;
-    line-height: 1.7;
-    border-left: 6px solid #4a8bff;
-}
+        /* Outside grey heading section */
+        .heading-block {
+            background: #121212;
+            padding: 50px 40px;
+            text-align: center;
+        }
 
-/* TEAM TABLE */
-.team-table {
-    margin-top: 40px;
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 20px;
-}
+        .heading-block p {
+            color: #bdbdbd;
+            margin-top: 10px;
+        }
 
-.team-table th, .team-table td {
-    border-bottom: 1px solid #e6e6e6;
-    padding: 15px;
-}
+        /* Button */
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 24px;
+            background: #00c8ff;
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+        }
 
-.team-table th {
-    background: #eef3ff;
-    font-weight: 700;
-    color: #0a2540;
-}
-</style>
+        .btn:hover {
+            background: #00a6d6;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<div class="navbar">
-    <div class="logo">SmartCity</div>
-
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="project.html">Project</a>
-        <a href="collabz.html">Collaboration</a>
-        <a href="sunil.html">Sunil</a>
-        <a href="vijayalaxmi.html">Vijayalaxmi</a>
-        <a href="vaishnavi.html">Vaishnavi</a>
-        <a href="sushant.html">Sushant</a>
-    </div>
+<!-- ================= SIDEBAR ================= -->
+<div class="sidebar">
+    <h2>DAA Project</h2>
+    <a href="home.html">Home</a>
+    <a href="ideas.html">Smart City Ideas</a>
+    <a href="idea1.html">Idea 1 – Sports</a>
+    <a href="idea2.html">Idea 2 – Mobility</a>
+    <a href="idea3.html">Idea 3 – A-LMS</a>
+    <a href="idea4.html">Idea 4 – Waste</a>
+    <a href="idea5.html">Idea 5 – Water</a>
 </div>
 
-<!-- LEFT GRADIENT -->
-<div class="left-gradient"></div>
+<!-- ================= MAIN ================= -->
+<div class="main">
 
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-title">
-        Smart City  
-        Innovation  
-        for Tomorrow
-    </div>
-</div>
-
-<!-- EXPLORE BUTTON -->
-<div class="right-side">
-    <button class="explore-btn" onclick="location.href='project.html'">
-        Explore Our Project →
-    </button>
-</div>
-
-<!-- COURSE INFO SECTION -->
-<div class="section">
-    <h2>📘 Course Information</h2>
-
-    <div class="course-box">
-        <b>Course:</b> Artificial Intelligence & Machine Learning (AIML) <br>
-        <b>Department:</b> Computer Science & Engineering <br>
-        <b>College:</b> Government College of Engineering, Karad <br>
-        <b>Project:</b> Smart City – Future Tech Innovation
+    <!-- PAGE HEADING -->
+    <div class="heading-block">
+        <h1>Smart City Project</h1>
+        <p>Design & Analysis of Algorithms (DAA)</p>
+        <p>Real-world application of algorithms taught in class</p>
     </div>
 
-    <h2 style="margin-top:60px;">👥 Our Team Members</h2>
+    <!-- ================= DAA OVERVIEW ================= -->
+    <div class="section-grey-light">
+        <div class="section-content">
+            <h2>About the DAA Subject</h2>
+            <p>
+                Design & Analysis of Algorithms (DAA) focuses on creating efficient solutions
+                for real-world problems using well-defined algorithmic strategies.
+                In this project, all Smart City ideas are designed strictly using
+                algorithms and data structures taught in class.
+            </p>
+        </div>
+    </div>
 
-    <table class="team-table">
-        <tr>
-            <th>Name</th>
-            <th>Role</th>
-            <th>Page Link</th>
-        </tr>
+    <!-- ================= GRAPH ALGORITHMS ================= -->
+    <div class="section-grey-dark">
+        <div class="section-content">
+            <h3>Graph Algorithms – ~40% Real-World Importance</h3>
+            <p>
+                Algorithms such as <strong>Dijkstra, Bellman-Ford, Floyd-Warshall,
+                Prim’s, Kruskal’s and Warshall’s</strong> are used to model cities as graphs.
+                These are applied in road networks, water pipelines, waste collection routes,
+                energy-efficient transport systems, and network optimization.
+            </p>
+        </div>
+    </div>
 
-        <tr>
-            <td>Sunil</td>
-            <td>Team Leader / Developer</td>
-            <td><a href="sunil.html">Open</a></td>
-        </tr>
+    <!-- ================= TREES ================= -->
+    <div class="section-grey-light">
+        <div class="section-content">
+            <h3>Trees (BST, AVL, Red-Black, 2-3 Trees) – ~25%</h3>
+            <p>
+                Tree structures allow fast searching, insertion, and deletion.
+                They are used to store sports records, student performance,
+                vehicle information, sensor data, and city infrastructure logs.
+            </p>
+        </div>
+    </div>
 
-        <tr>
-            <td>Vijayalaxmi</td>
-            <td>Research / Analyst</td>
-            <td><a href="vijayalaxmi.html">Open</a></td>
-        </tr>
+    <!-- ================= SORTING ================= -->
+    <div class="section-grey-dark">
+        <div class="section-content">
+            <h3>Sorting Algorithms – ~15%</h3>
+            <p>
+                Sorting algorithms such as <strong>Bubble, Selection, Insertion,
+                Merge, Quick, and Heap Sort</strong> are used to rank players,
+                prioritize services, analyze consumption data, and generate reports.
+            </p>
+        </div>
+    </div>
 
-        <tr>
-            <td>Vaishnavi</td>
-            <td>Content / UI Designer</td>
-            <td><a href="vaishnavi.html">Open</a></td>
-        </tr>
+    <!-- ================= HEAPS & QUEUES ================= -->
+    <div class="section-grey-light">
+        <div class="section-content">
+            <h3>Heaps & Priority Queues – ~10%</h3>
+            <p>
+                Priority Queues manage scheduling problems such as
+                emergency response, transport allocation, EV charging,
+                and ranking systems in Smart City applications.
+            </p>
+        </div>
+    </div>
 
-        <tr>
-            <td>Sushant</td>
-            <td>Technical Support / Developer</td>
-            <td><a href="sushant.html">Open</a></td>
-        </tr>
-    </table>
+    <!-- ================= HASHING ================= -->
+    <div class="section-grey-dark">
+        <div class="section-content">
+            <h3>Hashing Techniques – ~10%</h3>
+            <p>
+                Hashing enables constant-time access to records.
+                It is used for storing user data, sensor logs,
+                authentication, and real-time system lookups.
+            </p>
+
+            <a href="ideas.html" class="btn">Explore Smart City Ideas →</a>
+        </div>
+    </div>
+
 </div>
 
 </body>
 </html>
-
