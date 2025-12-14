@@ -1,224 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart City Project – DAA Overview</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAA Smart City Project – Sushant Bilage</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #0f0f0f;
-            color: #e0e0e0;
-        }
+<style>
+body,h1,h2,p,a,div{font-family:'Poppins',sans-serif!important;}
+*{margin:0;padding:0;box-sizing:border-box;}
 
-        /* Layout */
-        .sidebar {
-            width: 220px;
-            height: 100vh;
-            position: fixed;
-            background: #121212;
-            padding: 25px 15px;
-            box-sizing: border-box;
-        }
+body{
+    background:#0e0e0e;
+    color:#fff;
+    padding:40px 20px;
+}
 
-        .sidebar h2 {
-            color: #00c8ff;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-        }
+.card{
+    background:rgba(20,20,35,0.75);
+    border-radius:20px;
+    padding:40px;
+    max-width:950px;
+    margin:auto;
+    border:1px solid rgba(0,255,200,0.2);
+}
 
-        .sidebar a {
-            display: block;
-            color: #cccccc;
-            text-decoration: none;
-            margin: 10px 0;
-            font-size: 0.95rem;
-        }
+h1{
+    color:#00ffbf;
+    font-size:2.2rem;
+    font-weight:600;
+}
 
-        .sidebar a:hover {
-            color: #00c8ff;
-        }
+h2{
+    margin-top:30px;
+    color:#00c8ff;
+    font-size:1.4rem;
+}
 
-        .main {
-            margin-left: 220px;
-        }
+p{
+    margin-top:12px;
+    color:#ddd;
+    line-height:1.8;
+    font-size:0.95rem;
+}
 
-        /* Section styles */
-        .section-grey-light {
-            background: #1e1e1e;
-            padding: 60px 40px;
-            display: flex;
-            gap: 30px;
-        }
+.button{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 24px;
+    background:#00ffbf;
+    color:#000;
+    font-weight:500;
+    border-radius:12px;
+    text-decoration:none;
+    transition:0.3s;
+}
 
-        .section-grey-dark {
-            background: #2a2a2a;
-            padding: 60px 40px;
-            display: flex;
-            gap: 30px;
-        }
-
-        .section-content {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        h1 {
-            text-align: center;
-            color: #00c8ff;
-            font-size: 2.6rem;
-            margin: 0;
-        }
-
-        h2 {
-            color: #ffd166;
-            margin-bottom: 15px;
-        }
-
-        h3 {
-            color: #00ffbf;
-            margin-bottom: 10px;
-        }
-
-        p {
-            line-height: 1.7;
-            font-size: 0.95rem;
-        }
-
-        /* Outside grey heading section */
-        .heading-block {
-            background: #121212;
-            padding: 50px 40px;
-            text-align: center;
-        }
-
-        .heading-block p {
-            color: #bdbdbd;
-            margin-top: 10px;
-        }
-
-        /* Button */
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 24px;
-            background: #00c8ff;
-            color: #000;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 6px;
-        }
-
-        .btn:hover {
-            background: #00a6d6;
-        }
-    </style>
+.button:hover{transform:scale(1.05);}
+</style>
 </head>
 
 <body>
 
-<!-- ================= SIDEBAR ================= -->
-<div class="sidebar">
-    <h2>DAA Project</h2>
-    <a href="home.html">Home</a>
-    <a href="ideas.html">Smart City Ideas</a>
-    <a href="idea1.html">Idea 1 – Sports</a>
-    <a href="idea2.html">Idea 2 – Mobility</a>
-    <a href="idea3.html">Idea 3 – A-LMS</a>
-    <a href="idea4.html">Idea 4 – Waste</a>
-    <a href="idea5.html">Idea 5 – Water</a>
-</div>
+<div class="card">
 
-<!-- ================= MAIN ================= -->
-<div class="main">
+<h1>Smart City Project – Design & Analysis of Algorithms</h1>
 
-    <!-- PAGE HEADING -->
-    <div class="heading-block">
-        <h1>Smart City Project</h1>
-        <p>Design & Analysis of Algorithms (DAA)</p>
-        <p>Real-world application of algorithms taught in class</p>
-    </div>
+<p>
+This project demonstrates the real-world application of
+<strong>Design and Analysis of Algorithms (DAA)</strong>
+in building intelligent Smart City solutions.
+</p>
 
-    <!-- ================= DAA OVERVIEW ================= -->
-    <div class="section-grey-light">
-        <div class="section-content">
-            <h2>About the DAA Subject</h2>
-            <p>
-                Design & Analysis of Algorithms (DAA) focuses on creating efficient solutions
-                for real-world problems using well-defined algorithmic strategies.
-                In this project, all Smart City ideas are designed strictly using
-                algorithms and data structures taught in class.
-            </p>
-        </div>
-    </div>
+<p>
+The ideas covered use core DAA concepts such as
+Graphs, Trees, Shortest Path Algorithms, Greedy Methods,
+Dynamic Programming, Sorting, Searching, and Hashing.
+These concepts are critical in solving optimization, scalability,
+and efficiency problems in real systems.
+</p>
 
-    <!-- ================= GRAPH ALGORITHMS ================= -->
-    <div class="section-grey-dark">
-        <div class="section-content">
-            <h3>Graph Algorithms – ~40% Real-World Importance</h3>
-            <p>
-                Algorithms such as <strong>Dijkstra, Bellman-Ford, Floyd-Warshall,
-                Prim’s, Kruskal’s and Warshall’s</strong> are used to model cities as graphs.
-                These are applied in road networks, water pipelines, waste collection routes,
-                energy-efficient transport systems, and network optimization.
-            </p>
-        </div>
-    </div>
+<h2>DAA Concepts Covered</h2>
+<p>
+✔ Graph Algorithms (BFS, DFS, Dijkstra, Prim, Kruskal, Floyd, Bellman-Ford)<br>
+✔ Trees (BST, AVL, Heap, Priority Queue)<br>
+✔ Sorting Algorithms (Merge, Quick, Heap)<br>
+✔ Hash Tables & Searching<br>
+✔ Greedy & Dynamic Programming Techniques
+</p>
 
-    <!-- ================= TREES ================= -->
-    <div class="section-grey-light">
-        <div class="section-content">
-            <h3>Trees (BST, AVL, Red-Black, 2-3 Trees) – ~25%</h3>
-            <p>
-                Tree structures allow fast searching, insertion, and deletion.
-                They are used to store sports records, student performance,
-                vehicle information, sensor data, and city infrastructure logs.
-            </p>
-        </div>
-    </div>
+<h2>Smart City Applications</h2>
+<p>
+Each idea applies these algorithms to practical domains such as
+sports management, transport optimization, education accessibility,
+waste management, and water distribution.
+</p>
 
-    <!-- ================= SORTING ================= -->
-    <div class="section-grey-dark">
-        <div class="section-content">
-            <h3>Sorting Algorithms – ~15%</h3>
-            <p>
-                Sorting algorithms such as <strong>Bubble, Selection, Insertion,
-                Merge, Quick, and Heap Sort</strong> are used to rank players,
-                prioritize services, analyze consumption data, and generate reports.
-            </p>
-        </div>
-    </div>
-
-    <!-- ================= HEAPS & QUEUES ================= -->
-    <div class="section-grey-light">
-        <div class="section-content">
-            <h3>Heaps & Priority Queues – ~10%</h3>
-            <p>
-                Priority Queues manage scheduling problems such as
-                emergency response, transport allocation, EV charging,
-                and ranking systems in Smart City applications.
-            </p>
-        </div>
-    </div>
-
-    <!-- ================= HASHING ================= -->
-    <div class="section-grey-dark">
-        <div class="section-content">
-            <h3>Hashing Techniques – ~10%</h3>
-            <p>
-                Hashing enables constant-time access to records.
-                It is used for storing user data, sensor logs,
-                authentication, and real-time system lookups.
-            </p>
-
-            <a href="ideas.html" class="btn">Explore Smart City Ideas →</a>
-        </div>
-    </div>
+<a href="ideas.html" class="button">Explore Project Ideas →</a>
 
 </div>
 
