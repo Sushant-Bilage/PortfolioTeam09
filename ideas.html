@@ -3,310 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Structured Sports Data Management System</title>
+    <title>Smart City Ideas – DAA Project</title>
 
-    <!-- FONT SAME AS HOME & IDEAS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        body, h1, h2, h3, h4, h5, h6,
-        p, a, span, div, table, th, td, button {
-            font-family: 'Poppins', sans-serif !important;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
         body {
-            background: #0e0e0e; /* BLACK BACKGROUND */
-            color: #fff;
-            padding: 40px 20px;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0f0f0f;
+            color: #e0e0e0;
         }
 
-        .card {
-            background: rgba(20, 20, 35, 0.75);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 35px;
-            max-width: 900px;
-            margin: auto;
-            border: 1px solid rgba(0,255,200,0.2);
-            box-shadow: 0 0 18px rgba(0,255,200,0.15);
+        /* Sidebar */
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            position: fixed;
+            background: #121212;
+            padding: 25px 15px;
+            box-sizing: border-box;
         }
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #00ffbf;
-            font-weight: 600;
+        .sidebar h2 {
+            color: #00c8ff;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
         }
 
-        .section-title {
-            margin-top: 28px;
-            font-size: 1.25rem;
-            font-weight: 600;
+        .sidebar a {
+            display: block;
+            color: #cccccc;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 0.95rem;
+        }
+
+        .sidebar a:hover {
             color: #00c8ff;
         }
 
-        p {
-            margin-top: 10px;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: #ddd;
+        /* Main content */
+        .main {
+            margin-left: 220px;
         }
 
-        .button {
-            display: inline-block;
-            padding: 10px 18px;
-            background: #00ffbf;
-            color: #000;
-            text-decoration: none;
-            font-weight: 500;
-            border-radius: 10px;
-            margin-top: 12px;
-            transition: 0.3s;
+        /* Sections */
+        .section-grey-light {
+            background: #1e1e1e;
+            padding: 60px 40px;
         }
 
-        .button:hover { transform: scale(1.05); }
-
-        .github-main {
-            display: inline-block;
-            padding: 12px 22px;
-            background: #00c8ff;
-            color: #000;
-            text-decoration: none;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            font-weight: 500;
-            transition: 0.3s;
+        .section-grey-dark {
+            background: #2a2a2a;
+            padding: 60px 40px;
         }
 
-        .github-main:hover { transform: scale(1.05); }
-
-        .back {
-            display: inline-block;
-            padding: 12px 20px;
-            margin-top: 35px;
-            background: #00aaff;
-            color: #fff;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
+        .section-content {
+            max-width: 1000px;
+            margin: auto;
         }
 
-        .back:hover { background: #0088cc; }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 25px;
-            background: rgba(255,255,255,0.06);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 12px 14px;
+        /* Header */
+        .heading-block {
+            background: #121212;
+            padding: 50px 40px;
             text-align: center;
         }
 
-        th {
-            background: rgba(0,255,200,0.22);
+        h1 {
+            color: #00c8ff;
+            font-size: 2.6rem;
+            margin: 0;
+        }
+
+        h2 {
+            color: #ffd166;
+            margin-bottom: 15px;
+        }
+
+        h3 {
             color: #00ffbf;
-            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.7;
             font-size: 0.95rem;
         }
 
-        td {
-            color: #e6e6e6;
-            font-size: 0.9rem;
+        /* Clickable Idea Cards */
+        .idea-card {
+            border-left: 4px solid #00c8ff;
+            padding: 20px;
+            background: rgba(255,255,255,0.03);
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: background 0.25s, transform 0.2s;
         }
 
-        tr:nth-child(even) { background: rgba(255,255,255,0.05); }
-        tr:nth-child(odd)  { background: rgba(255,255,255,0.03); }
+        .idea-card:hover {
+            background: rgba(255,255,255,0.07);
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 
 <body>
 
-<div class="card">
+<!-- ================= SIDEBAR ================= -->
+<div class="sidebar">
+    <h2>DAA Project</h2>
+    <a href="home.html">Home</a>
+    <a href="ideas.html">Smart City Ideas</a>
+    <a href="idea1.html">Idea 1 – Sports</a>
+    <a href="idea2.html">Idea 2 – Mobility</a>
+    <a href="idea3.html">Idea 3 – A-LMS</a>
+    <a href="idea4.html">Idea 4 – Waste</a>
+    <a href="idea5.html">Idea 5 – Water</a>
+</div>
 
-    <h1>Structured Sports Data Management System</h1>
+<!-- ================= MAIN ================= -->
+<div class="main">
 
-    <a href="https://github.com/Sushant-Bilage/PortfolioTeam09" target="_blank" class="github-main">
-        🌐 Open GitHub Repository
-    </a>
+    <!-- PAGE HEADING -->
+    <div class="heading-block">
+        <h1>Smart City Project Ideas</h1>
+        <p>Real-world applications built using Design & Analysis of Algorithms</p>
+    </div>
 
-    <!-- INTRODUCTION -->
-    <p>
-        The Structured Sports Data Management System is designed to manage all sports-related activities 
-        in a smart city—player profiles, match schedules, performance tracking, rankings, and tournament 
-        progression.
-    </p>
+    <!-- INTRO -->
+    <div class="section-grey-light">
+        <div class="section-content">
+            <h2>Overview</h2>
+            <p>
+                Each Smart City idea below demonstrates how core DAA concepts such as
+                graph algorithms, trees, sorting techniques, and optimization methods
+                are applied to solve real-world urban problems.
+            </p>
+        </div>
+    </div>
 
-    <p>
-        As people grow busier with time, regular sports participation often declines due to lack of 
-        coordination and information. This system fills that gap by enabling organized sports activities, 
-        identifying nearby players with shared interests, assisting in venue selection, and structuring matches.
-    </p>
+    <!-- IDEAS LIST -->
+    <div class="section-grey-dark">
+        <div class="section-content">
 
-    <p>
-        The solution is built using core Design and Analysis of Algorithms (DAA) concepts to ensure 
-        efficient data handling, scalability, and real-world applicability.
-    </p>
+            <div class="idea-card" onclick="location.href='idea1.html'">
+                <h3>Idea 1: Structured Sports Data Management System</h3>
+                <p>
+                    Manages player records, rankings, tournament progression,
+                    and performance analysis using trees, sorting algorithms,
+                    and graph-based techniques.
+                </p>
+            </div>
 
-    <!-- HASH TABLE -->
-    <h2 class="section-title">Hash Table</h2>
-    <p>Stores player and team information with O(1) average lookup time.</p>
-    <a class="button" target="_blank" href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/hash1.cpp">
-        View Hash Table Implementation
-    </a>
+            <div class="idea-card" onclick="location.href='idea2.html'">
+                <h3>Idea 2: Energy-Optimized Mobility Classification System</h3>
+                <p>
+                    Optimizes city transportation by computing minimum energy routes,
+                    prioritizing vehicles, and calculating fares using graph algorithms
+                    and priority queues.
+                </p>
+            </div>
 
-    <!-- PRIORITY QUEUE -->
-    <h2 class="section-title">Priority Queue / Heap</h2>
-    <p>Used for ranking players and selecting top performers.</p>
-    <a class="button" target="_blank" href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/priorityqueue1.cpp">
-        View Priority Queue Implementation
-    </a>
+            <div class="idea-card" onclick="location.href='idea3.html'">
+                <h3>Idea 3: Accessible Animated Learning Management System (A-LMS)</h3>
+                <p>
+                    Provides inclusive education through structured lesson flows,
+                    adaptive learning paths, and student performance analysis
+                    using BFS, trees, and sorting.
+                </p>
+            </div>
 
-    <!-- LINKED LIST -->
-    <h2 class="section-title">Linked List</h2>
-    <p>Manages dynamic match schedules and sequential event updates.</p>
-    <a class="button" target="_blank" href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/ll1.cpp">
-        View Linked List Implementation
-    </a>
+            <div class="idea-card" onclick="location.href='idea4.html'">
+                <h3>Idea 4: Intelligent Waste Classification & Recycling System</h3>
+                <p>
+                    Optimizes waste collection routes, recycling networks,
+                    and environmental impact using shortest path algorithms
+                    and minimum spanning trees.
+                </p>
+            </div>
 
-    <!-- GRAPH -->
-    <h2 class="section-title">Graph</h2>
-    <p>Represents tournament brackets and match relationships.</p>
-    <a class="button" target="_blank" href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/graph1.cpp">
-        View Graph Implementation
-    </a>
+            <div class="idea-card" onclick="location.href='idea5.html'">
+                <h3>Idea 5: Intelligent Water Flow & Leak Management System</h3>
+                <p>
+                    Detects water leaks, optimizes pipeline networks,
+                    and balances pressure using classical graph algorithms
+                    and balanced tree structures.
+                </p>
+            </div>
 
-    <!-- DFS -->
-    <h2 class="section-title">Depth First Search (DFS)</h2>
-    <p>Explores competition paths and tournament progression.</p>
-    <a class="button" target="_blank" href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/dfs1.cpp">
-        View DFS Implementation
-    </a>
-
-    <!-- BFS -->
-    <h2 class="section-title">Breadth First Search (BFS)</h2>
-    <p>Analyzes matches level-by-level for fair scheduling.</p>
-    <a class="button" target="_blank" href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/bfs1.cpp">
-        View BFS Implementation
-    </a>
-
-    <!-- DIJKSTRA -->
-    <h2 class="section-title">Dijkstra Algorithm</h2>
-    <p>Computes optimal match progression paths using weighted criteria.</p>
-    <a class="button" target="_blank" href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/dijesktra1.cpp">
-        View Dijkstra Implementation
-    </a>
-
-    <!-- SORTING -->
-    <h2 class="section-title">Sorting & Searching</h2>
-    <p>Used for rankings, scoreboards, and efficient data retrieval.</p>
-    <a class="button" target="_blank" href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/sortnsearch.cpp">
-        View Sorting & Searching Implementation
-    </a>
-
-    <!-- TABLE -->
-    <h2 class="section-title" style="margin-top:40px;">Data Structures & Algorithms Comparison</h2>
-
-    <table>
-        <tr>
-            <th>DS / Algorithm</th>
-            <th>Design Technique</th>
-            <th>Time Efficiency</th>
-            <th>Space Efficiency</th>
-            <th>Stability</th>
-            <th>Adaptive</th>
-            <th>In-Place</th>
-        </tr>
-
-        <tr>
-            <td>Hash Table</td>
-            <td>Hashing</td>
-            <td>Avg O(1), Worst O(n)</td>
-            <td>O(n)</td>
-            <td>Stable</td>
-            <td>No</td>
-            <td>No</td>
-        </tr>
-
-        <tr>
-            <td>Priority Queue</td>
-            <td>Heap</td>
-            <td>O(log n)</td>
-            <td>O(n)</td>
-            <td>Unstable</td>
-            <td>No</td>
-            <td>Yes</td>
-        </tr>
-
-        <tr>
-            <td>Linked List</td>
-            <td>Linear</td>
-            <td>Insert/Delete O(1)</td>
-            <td>O(n)</td>
-            <td>Stable</td>
-            <td>No</td>
-            <td>No</td>
-        </tr>
-
-        <tr>
-            <td>Graph</td>
-            <td>Graph Theory</td>
-            <td>O(V + E)</td>
-            <td>O(V + E)</td>
-            <td>N/A</td>
-            <td>No</td>
-            <td>No</td>
-        </tr>
-
-        <tr>
-            <td>DFS</td>
-            <td>Recursion / Stack</td>
-            <td>O(V + E)</td>
-            <td>O(V)</td>
-            <td>No</td>
-            <td>No</td>
-            <td>No</td>
-        </tr>
-
-        <tr>
-            <td>BFS</td>
-            <td>Queue Based</td>
-            <td>O(V + E)</td>
-            <td>O(V)</td>
-            <td>No</td>
-            <td>No</td>
-            <td>No</td>
-        </tr>
-
-        <tr>
-            <td>Dijkstra</td>
-            <td>Greedy</td>
-            <td>O(E log V)</td>
-            <td>O(V)</td>
-            <td>No</td>
-            <td>No</td>
-            <td>No</td>
-        </tr>
-
-        <tr>
-            <td>Sorting & Searching</td>
-            <td>Comparison-Based</td>
-            <td>O(n log n)</td>
-            <td>O(1) – O(n)</td>
-            <td>Depends</td>
-            <td>Some</td>
-            <td>Some</td>
-        </tr>
-    </table>
-
-    <a href="ideas.html" class="back">← Back to All Ideas</a>
+        </div>
+    </div>
 
 </div>
 
