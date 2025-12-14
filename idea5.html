@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intelligent Water Flow & Leak Management System</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body,h1,h2,p,a,table,th,td,div{
+    font-family:'Poppins',sans-serif!important;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    background:#0e0e0e;
+    color:#fff;
+    padding:40px 20px;
+}
+
+.card{
+    background:rgba(20,20,35,0.75);
+    border-radius:20px;
+    padding:35px;
+    max-width:900px;
+    margin:auto;
+    border:1px solid rgba(0,255,200,0.2);
+}
+
+h1{
+    color:#00ffbf;
+    font-size:2rem;
+    font-weight:600;
+}
+
+.section-title{
+    margin-top:28px;
+    font-size:1.25rem;
+    font-weight:600;
+    color:#00c8ff;
+}
+
+p{
+    margin-top:10px;
+    font-size:0.95rem;
+    line-height:1.7;
+    color:#ddd;
+}
+
+.button{
+    display:inline-block;
+    padding:10px 18px;
+    background:#00ffbf;
+    color:#000;
+    font-weight:500;
+    border-radius:10px;
+    margin-top:12px;
+    text-decoration:none;
+    transition:0.3s;
+}
+.button:hover{transform:scale(1.05);}
+
+.back{
+    display:inline-block;
+    padding:12px 20px;
+    margin-top:35px;
+    background:#00aaff;
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+    background:rgba(255,255,255,0.06);
+    border-radius:12px;
+    overflow:hidden;
+}
+
+th,td{
+    padding:12px 14px;
+    text-align:center;
+}
+
+th{
+    background:rgba(0,255,200,0.22);
+    color:#00ffbf;
+    font-weight:600;
+}
+
+td{
+    color:#e6e6e6;
+    font-size:0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Intelligent Water Flow & Leak Management System</h1>
+
+<p>
+The Intelligent Water Flow & Leak Management System manages urban water pipelines
+to minimize leakage, reduce installation cost, and ensure efficient distribution.
+</p>
+
+<p>
+Design and Analysis of Algorithms (DAA) concepts are used to model pipeline networks,
+optimize layout cost, detect leaks, and manage emergency water supply efficiently.
+</p>
+
+<h2 class="section-title">Graph – Water Network Modeling</h2>
+<p>Nodes represent junctions and edges represent pipelines with distance as weight.</p>
+<a class="button" target="_blank"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/graph5.cpp">
+View Graph Code
+</a>
+
+<h2 class="section-title">Kruskal’s Algorithm – Minimum Cost Pipeline Layout</h2>
+<p>Connects nearby areas using minimum total pipe length and cost.</p>
+<a class="button" target="_blank"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/kruskal5.cpp">
+View Kruskal Code
+</a>
+
+<h2 class="section-title">Dijkstra’s Algorithm – Shortest Water Supply Path</h2>
+<p>Finds shortest paths from reservoir to distribution zones.</p>
+<a class="button" target="_blank"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/dijkstra5.cpp">
+View Dijkstra Code
+</a>
+
+<h2 class="section-title">Bellman-Ford – Leak Detection</h2>
+<p>Detects abnormal pressure drops using negative cycle detection.</p>
+<a class="button" target="_blank"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/bellman5.cpp">
+View Bellman-Ford Code
+</a>
+
+<h2 class="section-title">Floyd-Warshall – Global Flow Optimization</h2>
+<p>Optimizes water distribution between all pairs of junctions.</p>
+<a class="button" target="_blank"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/floyd5.cpp">
+View Floyd-Warshall Code
+</a>
+
+<h2 class="section-title">Priority Queue – Emergency Handling</h2>
+<p>Prioritizes zones with severe leakage or low water supply.</p>
+<a class="button" target="_blank"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/priorityqueue5.cpp">
+View Priority Queue Code
+</a>
+
+<h2 class="section-title">Hash Table – Sensor Mapping</h2>
+<p>Stores sensor IDs and zone data for constant-time access.</p>
+<a class="button" target="_blank"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/hash5.cpp">
+View Hash Table Code
+</a>
+
+<h2 class="section-title">Queue – Alert Processing</h2>
+<p>Processes leakage alerts in FIFO order.</p>
+<a class="button" target="_blank"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/queue5.cpp">
+View Queue Code
+</a>
+
+<h2 class="section-title">Sorting – Pressure & Flow Analysis</h2>
+<p>Ranks zones based on pressure and water usage.</p>
+<a class="button" target="_blank"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/sort5.cpp">
+View Sorting Code
+</a>
+
+<!-- SAME TABLE FORMAT AS PREVIOUS IDEAS -->
+<h2 class="section-title" style="margin-top:40px;">
+Data Structures & Algorithms Comparison
+</h2>
+
+<table>
+<tr>
+<th>DS / Algorithm</th>
+<th>Design Technique</th>
+<th>Time Efficiency</th>
+<th>Space Efficiency</th>
+<th>Stability</th>
+<th>Adaptive</th>
+<th>In-Place</th>
+</tr>
+
+<tr>
+<td>Graph</td>
+<td>Graph Theory</td>
+<td>O(V + E)</td>
+<td>O(V + E)</td>
+<td>N/A</td>
+<td>No</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Kruskal</td>
+<td>Greedy</td>
+<td>O(E log E)</td>
+<td>O(V)</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Dijkstra</td>
+<td>Greedy</td>
+<td>O(E log V)</td>
+<td>O(V)</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Bellman-Ford</td>
+<td>Relaxation</td>
+<td>O(VE)</td>
+<td>O(V)</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Floyd-Warshall</td>
+<td>Dynamic Programming</td>
+<td>O(V³)</td>
+<td>O(V²)</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Priority Queue</td>
+<td>Heap</td>
+<td>O(log n)</td>
+<td>O(n)</td>
+<td>Unstable</td>
+<td>No</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Hash Table</td>
+<td>Hashing</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>Stable</td>
+<td>No</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Queue</td>
+<td>FIFO</td>
+<td>O(1)</td>
+<td>O(n)</td>
+<td>Stable</td>
+<td>No</td>
+<td>No</td>
+</tr>
+
+<tr>
+<td>Sorting</td>
+<td>Divide & Conquer</td>
+<td>O(n log n)</td>
+<td>Varies</td>
+<td>Depends</td>
+<td>Some</td>
+<td>Some</td>
+</tr>
+</table>
+
+<a href="ideas.html" class="back">← Back to All Ideas</a>
+
+</div>
+
+</body>
+</html>
