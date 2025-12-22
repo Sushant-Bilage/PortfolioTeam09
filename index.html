@@ -3,102 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DAA Smart City Project – Sushant Bilage</title>
+<title>Vritdhara City</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body,h1,h2,p,a,div{font-family:'Poppins',sans-serif!important;}
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
 body{
-    background:#0e0e0e;
-    color:#fff;
-    padding:40px 20px;
+    background:radial-gradient(circle at top, #0e0e1a, #050010);
+    color:#ffffff;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .card{
     background:rgba(20,20,35,0.75);
-    border-radius:20px;
-    padding:40px;
-    max-width:950px;
-    margin:auto;
-    border:1px solid rgba(0,255,200,0.2);
+    backdrop-filter:blur(10px);
+    border-radius:24px;
+    padding:60px 50px;
+    max-width:700px;
+    text-align:center;
+    border:1px solid rgba(0,255,200,0.25);
+    box-shadow:0 0 35px rgba(0,255,200,0.2);
+    animation:fadeIn 1.3s ease;
 }
 
 h1{
+    font-size:2.6rem;
     color:#00ffbf;
-    font-size:2.2rem;
-    font-weight:600;
-}
-
-h2{
-    margin-top:30px;
-    color:#00c8ff;
-    font-size:1.4rem;
+    margin-bottom:20px;
+    letter-spacing:1px;
 }
 
 p{
-    margin-top:12px;
-    color:#ddd;
+    font-size:1.05rem;
+    color:#dddddd;
     line-height:1.8;
-    font-size:0.95rem;
+    margin-bottom:35px;
 }
 
 .button{
     display:inline-block;
-    margin-top:25px;
-    padding:12px 24px;
-    background:#00ffbf;
+    padding:15px 38px;
+    background:linear-gradient(135deg, #00ffbf, #00c8ff);
     color:#000;
-    font-weight:500;
-    border-radius:12px;
+    font-weight:600;
+    border-radius:30px;
     text-decoration:none;
-    transition:0.3s;
+    transition:0.35s ease;
+    box-shadow:0 0 18px rgba(0,255,200,0.6);
 }
 
-.button:hover{transform:scale(1.05);}
+.button:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 0 30px rgba(0,255,200,0.85);
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 </style>
 </head>
 
 <body>
 
 <div class="card">
+    <h1>Welcome to Vritdhara City</h1>
 
-<h1>Smart City Project – Design & Analysis of Algorithms</h1>
+    <p>
+        A conceptual smart city designed to showcase intelligent systems,
+        optimized resource management, and technology-driven urban solutions.
+    </p>
 
-<p>
-This project demonstrates the real-world application of
-<strong>Design and Analysis of Algorithms (DAA)</strong>
-in building intelligent Smart City solutions.
-</p>
-
-<p>
-The ideas covered use core DAA concepts such as
-Graphs, Trees, Shortest Path Algorithms, Greedy Methods,
-Dynamic Programming, Sorting, Searching, and Hashing.
-These concepts are critical in solving optimization, scalability,
-and efficiency problems in real systems.
-</p>
-
-<h2>DAA Concepts Covered</h2>
-<p>
-✔ Graph Algorithms (BFS, DFS, Dijkstra, Prim, Kruskal, Floyd, Bellman-Ford)<br>
-✔ Trees (BST, AVL, Heap, Priority Queue)<br>
-✔ Sorting Algorithms (Merge, Quick, Heap)<br>
-✔ Hash Tables & Searching<br>
-✔ Greedy & Dynamic Programming Techniques
-</p>
-
-<h2>Smart City Applications</h2>
-<p>
-Each idea applies these algorithms to practical domains such as
-sports management, transport optimization, education accessibility,
-waste management, and water distribution.
-</p>
-
-<a href="ideas.html" class="button">Explore Project Ideas →</a>
-
+    <a href="ideas.html" class="button">Enter Project Ideas</a>
 </div>
 
 </body>
