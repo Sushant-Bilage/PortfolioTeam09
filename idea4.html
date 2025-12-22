@@ -3,40 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intelligent Waste Classification & Recycling System</title>
+<title>Intelligent Water Flow & Leak Management System</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body,h1,h2,p,a,table,th,td,div{
-    font-family:'Poppins',sans-serif!important;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
     background:#0e0e0e;
-    color:#fff;
+    color:#ffffff;
     padding:40px 20px;
 }
 
 .card{
     background:rgba(20,20,35,0.75);
-    backdrop-filter: blur(10px);
+    backdrop-filter:blur(10px);
     border-radius:20px;
     padding:35px;
-    max-width:900px;
+    max-width:950px;
     margin:auto;
     border:1px solid rgba(0,255,200,0.2);
+    box-shadow:0 0 20px rgba(0,255,200,0.15);
 }
 
 h1{
-    font-size:2rem;
-    margin-bottom:10px;
+    font-size:2.1rem;
     color:#00ffbf;
+    margin-bottom:15px;
 }
 
 .section-title{
-    margin-top:28px;
+    margin-top:30px;
     font-size:1.3rem;
     font-weight:600;
     color:#00c8ff;
@@ -44,14 +47,14 @@ h1{
 
 p{
     margin-top:10px;
-    font-size:1rem;
-    line-height:1.6;
-    color:#ddd;
+    font-size:0.98rem;
+    line-height:1.7;
+    color:#dddddd;
 }
 
 .button{
     display:inline-block;
-    padding:10px 18px;
+    padding:10px 20px;
     background:#00ffbf;
     color:#000;
     text-decoration:none;
@@ -60,14 +63,15 @@ p{
     margin-top:12px;
     transition:0.3s;
 }
-.button:hover{transform:scale(1.05);}
+
+.button:hover{ transform:scale(1.05); }
 
 .back{
     display:inline-block;
-    padding:12px 20px;
-    margin-top:35px;
+    padding:12px 22px;
+    margin-top:40px;
     background:#00aaff;
-    color:#fff;
+    color:#ffffff;
     border-radius:10px;
     text-decoration:none;
     font-weight:500;
@@ -78,7 +82,7 @@ table{
     width:100%;
     border-collapse:collapse;
     margin-top:25px;
-    background:rgba(255,255,255,0.07);
+    background:rgba(255,255,255,0.06);
     border-radius:12px;
     overflow:hidden;
 }
@@ -94,12 +98,12 @@ th{
     font-weight:600;
 }
 
-tr:nth-child(even){background:rgba(255,255,255,0.06);}
+tr:nth-child(even){background:rgba(255,255,255,0.05);}
 tr:nth-child(odd){background:rgba(255,255,255,0.03);}
 
 td{
     color:#e6e6e6;
-    font-size:0.95rem;
+    font-size:0.92rem;
 }
 </style>
 </head>
@@ -108,99 +112,56 @@ td{
 
 <div class="card">
 
-<h1>Intelligent Waste Classification & Recycling System</h1>
+<h1>Intelligent Water Flow & Leak Management System</h1>
 
-<!-- INTRO -->
 <p>
-The Intelligent Waste Classification & Recycling System aims to improve waste management
-in smart cities by automatically classifying waste, optimizing collection routes,
-and increasing recycling efficiency.
+This system manages urban water pipelines to minimize leakage, reduce installation cost,
+and ensure efficient water distribution in a smart city.
 </p>
 
 <p>
-Design and Analysis of Algorithms (DAA) is applied to manage large-scale waste data,
-reduce transportation cost, ensure timely collection, and prioritize hazardous waste
-processing.
+Design and Analysis of Algorithms (DAA) is used to model pipeline networks, optimize
+routing cost, detect leaks, and prioritize emergency response.
 </p>
 
-<!-- GRAPH -->
-<h2 class="section-title">Graph – City Waste Collection Network</h2>
+<h2 class="section-title">Graph – Water Network Modeling</h2>
+<p>Junctions are nodes and pipelines are weighted edges.</p>
+
+<h2 class="section-title">Kruskal’s Algorithm</h2>
+<p>Finds the minimum cost pipeline layout.</p>
+
+<h2 class="section-title">Dijkstra’s Algorithm</h2>
+<p>Computes the shortest water supply path from reservoirs.</p>
+
+<h2 class="section-title">Bellman-Ford Algorithm</h2>
+<p>Detects leaks using negative cycle detection.</p>
+
+<h2 class="section-title">Floyd–Warshall Algorithm</h2>
+<p>Optimizes water flow between all junction pairs.</p>
+
+<h2 class="section-title">Priority Queue</h2>
+<p>Handles emergency zones based on severity.</p>
+
+<h2 class="section-title">Hash Table</h2>
+<p>Maps sensor IDs to zones with constant-time access.</p>
+
+<h2 class="section-title">Queue</h2>
+<p>Processes leak alerts in FIFO order.</p>
+
+<h2 class="section-title">Introsort (std::sort)</h2>
+<p>Ranks zones by pressure drop and water usage.</p>
+
+<h2 class="section-title">Complete System Implementation</h2>
 <p>
-Graphs represent waste collection zones as nodes and roads as edges, enabling
-efficient modeling of the city waste infrastructure.
+The complete integrated C++ implementation is available below.
 </p>
-<a class="button" target="_blank"
-href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/graph4.cpp">
-View Graph Code
+
+<a class="button"
+href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/file5.cpp"
+target="_blank">
+View Complete C++ Code
 </a>
 
-<!-- BFS -->
-<h2 class="section-title">Breadth First Search (BFS) – Area Coverage</h2>
-<p>
-BFS ensures systematic and level-wise coverage of all waste bins,
-preventing missed collection points.
-</p>
-<a class="button" target="_blank"
-href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/bfs4.cpp">
-View BFS Code
-</a>
-
-<!-- DFS -->
-<h2 class="section-title">Depth First Search (DFS) – Deep Zone Inspection</h2>
-<p>
-DFS helps in deep inspection of specific zones to detect illegal dumping
-and overflow conditions.
-</p>
-<a class="button" target="_blank"
-href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/dfs4.cpp">
-View DFS Code
-</a>
-
-<!-- KRUSKAL -->
-<h2 class="section-title">Kruskal’s Algorithm – Minimum Cost Collection Network</h2>
-<p>
-Kruskal’s algorithm constructs a minimum spanning tree that minimizes
-fuel and transportation cost during waste collection.
-</p>
-<a class="button" target="_blank"
-href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/kruskal4.cpp">
-View Kruskal Code
-</a>
-
-<!-- PRIORITY QUEUE -->
-<h2 class="section-title">Priority Queue – Waste Processing Priority</h2>
-<p>
-Priority queues ensure that hazardous and recyclable waste is processed
-before general waste.
-</p>
-<a class="button" target="_blank"
-href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/priorityqueue4.cpp">
-View Priority Queue Code
-</a>
-
-<!-- HASH TABLE -->
-<h2 class="section-title">Hash Table – Waste Category Lookup</h2>
-<p>
-Hash tables provide constant-time classification of waste types
-and their disposal methods.
-</p>
-<a class="button" target="_blank"
-href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/hash4.cpp">
-View Hash Table Code
-</a>
-
-<!-- SORTING -->
-<h2 class="section-title">Sorting Algorithms – Recycling Efficiency Ranking</h2>
-<p>
-Sorting algorithms rank waste categories based on recyclability
-and processing efficiency.
-</p>
-<a class="button" target="_blank"
-href="https://github.com/Sushant-Bilage/PortfolioTeam09/blob/main/sort4.cpp">
-View Sorting Code
-</a>
-
-<!-- TABLE -->
 <h2 class="section-title" style="margin-top:40px;">
 Data Structures & Algorithms Comparison
 </h2>
@@ -216,75 +177,15 @@ Data Structures & Algorithms Comparison
 <th>In-Place</th>
 </tr>
 
-<tr>
-<td>Graph</td>
-<td>Graph Theory</td>
-<td>O(V + E)</td>
-<td>O(V + E)</td>
-<td>N/A</td>
-<td>No</td>
-<td>No</td>
-</tr>
-
-<tr>
-<td>BFS</td>
-<td>Queue-Based Traversal</td>
-<td>O(V + E)</td>
-<td>O(V)</td>
-<td>No</td>
-<td>No</td>
-<td>No</td>
-</tr>
-
-<tr>
-<td>DFS</td>
-<td>Recursion / Stack</td>
-<td>O(V + E)</td>
-<td>O(V)</td>
-<td>No</td>
-<td>No</td>
-<td>No</td>
-</tr>
-
-<tr>
-<td>Kruskal’s Algorithm</td>
-<td>Greedy</td>
-<td>O(E log E)</td>
-<td>O(V)</td>
-<td>No</td>
-<td>No</td>
-<td>No</td>
-</tr>
-
-<tr>
-<td>Priority Queue</td>
-<td>Heap</td>
-<td>O(log n)</td>
-<td>O(n)</td>
-<td>Unstable</td>
-<td>No</td>
-<td>No</td>
-</tr>
-
-<tr>
-<td>Hash Table</td>
-<td>Hashing</td>
-<td>O(1)</td>
-<td>O(n)</td>
-<td>Stable</td>
-<td>No</td>
-<td>No</td>
-</tr>
-
-<tr>
-<td>Sorting Algorithms</td>
-<td>Divide & Conquer</td>
-<td>O(n log n)</td>
-<td>Varies</td>
-<td>Depends</td>
-<td>Some</td>
-<td>Some</td>
-</tr>
+<tr><td>Graph</td><td>Graph Theory</td><td>O(V + E)</td><td>O(V + E)</td><td>N/A</td><td>No</td><td>No</td></tr>
+<tr><td>Kruskal</td><td>Greedy</td><td>O(E log E)</td><td>O(V)</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>Dijkstra</td><td>Greedy</td><td>O(E log V)</td><td>O(V)</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>Bellman-Ford</td><td>Relaxation</td><td>O(VE)</td><td>O(V)</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>Floyd-Warshall</td><td>Dynamic Programming</td><td>O(V³)</td><td>O(V²)</td><td>No</td><td>No</td><td>No</td></tr>
+<tr><td>Priority Queue</td><td>Heap</td><td>O(log n)</td><td>O(n)</td><td>Unstable</td><td>No</td><td>No</td></tr>
+<tr><td>Hash Table</td><td>Hashing</td><td>O(1)</td><td>O(n)</td><td>Stable</td><td>No</td><td>No</td></tr>
+<tr><td>Queue</td><td>FIFO</td><td>O(1)</td><td>O(n)</td><td>Stable</td><td>No</td><td>No</td></tr>
+<tr><td>Introsort</td><td>Hybrid</td><td>O(n log n)</td><td>O(log n)</td><td>Unstable</td><td>No</td><td>Yes</td></tr>
 </table>
 
 <a href="ideas.html" class="back">← Back to All Ideas</a>
