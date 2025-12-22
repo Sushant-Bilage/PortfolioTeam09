@@ -8,54 +8,93 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body,h1,h2,p,a,div{font-family:'Poppins',sans-serif!important;}
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
 body{
-    background:#0e0e0e;
+    background:radial-gradient(circle at top, #0e0e1a, #050010);
     color:#fff;
     padding:40px 20px;
+    animation:fadeIn 1.2s ease-in-out;
 }
 
 h1{
     text-align:center;
     color:#00ffbf;
-    margin-bottom:40px;
+    margin-bottom:50px;
+    font-size:2.2rem;
+    letter-spacing:1px;
 }
 
+/* ================= CARD GRID ================= */
 .container{
-    max-width:900px;
+    max-width:1100px;
     margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
 }
 
+/* ================= CARD ================= */
 .idea{
     background:rgba(20,20,35,0.75);
-    padding:25px;
-    border-radius:16px;
-    border:1px solid rgba(0,255,200,0.2);
+    padding:28px;
+    border-radius:20px;
+    border:1px solid rgba(0,255,200,0.25);
     text-decoration:none;
-    color:#fff;
-    transition:0.3s;
+    color:#ffffff;
+    transition:all 0.4s ease;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 0 0 rgba(0,255,200,0);
 }
 
+/* Glow overlay */
+.idea::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(0,255,200,0.15),
+        transparent
+    );
+    transform:translateX(-100%);
+    transition:0.6s;
+}
+
+.idea:hover::before{
+    transform:translateX(100%);
+}
+
+/* Hover animation */
 .idea:hover{
-    transform:scale(1.04);
-    box-shadow:0 0 18px rgba(0,255,200,0.2);
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 0 25px rgba(0,255,200,0.35);
 }
 
+/* ================= TEXT ================= */
 .idea h2{
     color:#00c8ff;
-    font-size:1.3rem;
+    font-size:1.35rem;
+    margin-bottom:12px;
 }
 
 .idea p{
-    margin-top:10px;
-    color:#ddd;
+    color:#dddddd;
     font-size:0.95rem;
-    line-height:1.6;
+    line-height:1.7;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
 }
 </style>
 </head>
